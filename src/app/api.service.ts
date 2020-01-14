@@ -10,7 +10,7 @@ export class ApiService {
   strvar: string = 'e8ddbf3912400db66926895c485116fc';
   getweather(weatherlocation: string) {
     return this.httpClient.get<Weatherinfo>(
-      `http://api.openweathermap.org/data/2.5/weather?q=${weatherlocation}&APPID=${
+      `https://api.openweathermap.org/data/2.5/weather?q=${weatherlocation}&APPID=${
       this.strvar
       }  `
     );
