@@ -1,0 +1,61 @@
+<form>
+  <div class="form-group">
+    <div class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">weathercity</label>
+      <input [(ngModel)]="name" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div class=" row d-flex justify-content-center offset-sm-1 ">
+      <div class="mr-2">
+        <button type="submit" (click)="myClickFunction()" class="btn btn-primary  ">
+          Submit
+        </button>
+      </div>
+      <div class="ml-2">
+        <button (click)="myClickFunction1()" class="btn btn-primary  ">
+          clear
+        </button>
+      </div>
+
+    </div>
+    <div *ngIf="!temp" [@fadeInOut] class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Temp</label>
+      <input [(ngModel)]="temp" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div *ngIf="temp" [@EnterLeave]="'flyIn'" class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Temp</label>
+      <input [(ngModel)]="temp" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div [@fadeInOut] *ngIf="!mintemp" class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Min Temp</label>
+      <input [(ngModel)]="mintemp" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div [@EnterLeave1]="'flyIn'" *ngIf="mintemp" class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Min Temp</label>
+      <input [(ngModel)]="mintemp" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div *ngIf="!maxtemp" [@fadeInOut] class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Max Temp</label>
+      <input [(ngModel)]="maxtemp" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div *ngIf="maxtemp" [@EnterLeave2]="'flyIn'" class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Max Temp</label>
+      <input [(ngModel)]="maxtemp" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div *ngIf="!pressure" [@fadeInOut] class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Pressure</label>
+      <input [(ngModel)]="pressure" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div *ngIf="pressure" [@EnterLeave3]="'flyIn'" class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Pressure</label>
+      <input [(ngModel)]="pressure" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div *ngIf="!humidity" [@fadeInOut] class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Humidity</label>
+      <input [(ngModel)]="humidity" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+    <div *ngIf="humidity" [@EnterLeave4]="'flyIn'" class="row d-flex justify-content-center mt-4">
+      <label for="weaehrcity" class="col-lg-1">Humidity</label>
+      <input [(ngModel)]="humidity" type="text" [ngModelOptions]="{ standalone: true }" class="form-control" class="col-lg-3" />
+    </div>
+  </div>
+</form>
